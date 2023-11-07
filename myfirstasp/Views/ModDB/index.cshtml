@@ -1,0 +1,27 @@
+@model myfirstasp.Models.ModDBModel
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+<html>
+    <h1>test</h1>
+
+    <form method="post" asp-controller="ModDB" asp-action="InsertRecord">
+    @Html.AntiForgeryToken()
+    <!-- ni macam csrf dekat laravel -->
+    <input type="text" name="Name"/>
+    <input type="text" name="TestText"/>
+    <!-- nape guna name='Message'?? sebab form passing guna model -->
+    <!-- tengok controller kalau nak faham -->
+    <!-- 
+        PostAction(GreetModel greet)
+        greet.Message //sini kita boleh access balik benda yang kita post tadi
+    -->
+    
+    <button type="submit">Submit</button>
+</form>
+</html>

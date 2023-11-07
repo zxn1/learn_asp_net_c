@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/milcennii/test/myfirstasp/myfirstasp.csproj": {}
+  },
+  "projects": {
+    "/home/milcennii/test/myfirstasp/myfirstasp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/milcennii/test/myfirstasp/myfirstasp.csproj",
+        "projectName": "myfirstasp",
+        "projectPath": "/home/milcennii/test/myfirstasp/myfirstasp.csproj",
+        "packagesPath": "/home/milcennii/.nuget/packages/",
+        "outputPath": "/home/milcennii/test/myfirstasp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/milcennii/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.113/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

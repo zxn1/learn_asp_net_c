@@ -1,0 +1,16 @@
+dotnet new <template_type> -n <project_name> -o <output_directory>
+
+
+or
+
+dotnet new mvc -n <project_name>
+
+
+how to know mvc ke template type dia?
+tengok dekat: https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new
+
+
+na run project??
+run command below dkt root project directory
+
+dotnet run

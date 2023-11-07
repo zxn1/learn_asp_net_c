@@ -1,0 +1,53 @@
+@model myfirstasp.Models.ViewModelABModel;
+<!-- atas ni bermaksud view ni milik model tersebut -->
+
+@* @{
+    Layout = "_Layout";
+} 
+//bila dekat controller kita return View() mcm ni;
+by default dia akan guna _layout.cshtml dekat Shared folder tu.
+//so kalau nak ubah boleh buat mcm Layout = "_newLayout";
+*@
+
+<style>
+    .popular {
+        color : red;
+    }
+</style>
+
+<h1>test</h1>
+
+<h3>@ViewData["Kucing"]</h3>
+<h6>@ViewBag.Kucings</h6>
+
+<!-- see ni access kucing, ini menunjukkan viewdata dan viewbag berkongsi/sama -->
+<h6>@ViewBag.Kucing</h6>
+
+<hr>
+<h3>How to Display 2 different models here</h3>
+<h4>@Model.modelA.Name</h4>
+<h4>@Model.modelB.Name</h4>
+<hr>
+<h6>@Model.listModA</h6>
+<hr>
+<p>Display in loop of list item:</p>
+<ul>
+    @foreach(var item in Model.listModA)
+    {
+        <li>@item.Name</li>
+    }
+</ul>
+
+@{
+    var injectClassName = Model.modelA.Name != "" ? "popular" : null;
+}
+
+@if(Model.listModA.Count >= 0)
+{
+    <p class="@injectClassName">*There is a item in listModA*</p>
+}
+
+
+@*
+This is how to comment lol
+*@

@@ -1,0 +1,22 @@
+@model myfirstasp.Models.GreetModel
+
+<h1>@Model.Message</h1>
+
+
+<!-- <form method="post"> 
+//kalau aku tak specify asp-controller macam ni, dia akan buat self-postback. Dia pergi function yang sama dekat controller yang sama
+-->
+
+<form method="post" asp-controller="Hello" asp-action="PostAction">
+    @Html.AntiForgeryToken()
+    <!-- ni macam csrf dekat laravel -->
+    <input type="text" name="Message"/>
+    <!-- nape guna name='Message'?? sebab form passing guna model -->
+    <!-- tengok controller kalau nak faham -->
+    <!-- 
+        PostAction(GreetModel greet)
+        greet.Message //sini kita boleh access balik benda yang kita post tadi
+    -->
+    
+    <button type="submit">Submit</button>
+</form>
